@@ -1,13 +1,9 @@
 $(function() {
     "use strict";
 
-
-
-
     /* ==========================================================================
-       Sub Form   
-       ========================================================================== */
-
+       Sub Form
+     ========================================================================== */
 
     $('#mc-form').ajaxChimp({
         callback: callbackFunction,
@@ -25,69 +21,58 @@ $(function() {
         }
     }
 
-
-
-    /* ==========================================================================
+  /* ==========================================================================
    Product statistics counter
    ========================================================================== */
 
 
-    $('.product-statistics').waypoint(function() {
+  $('.product-statistics').waypoint(function() {
+    $('.counter-1').animateNumber({
+        number: 50, //change value here
+
+    }, 2000);
+
+    $('.counter-2').animateNumber({
+        number: 70, //change value here
+
+    }, 2000);
+
+    $('.counter-3').animateNumber({
+        number: 90, //change value here
+
+    }, 2000);
+
+    $('.counter-4').animateNumber({
+        number: 60, //change value here
+
+    }, 2000);
+
+    this.destroy();
+
+  }, {
+    offset: '80%'
+
+  });
 
 
-
-        $('.counter-1').animateNumber({
-            number: 50, //change value here
-
-        }, 2000);
-
-        $('.counter-2').animateNumber({
-            number: 70, //change value here
-
-        }, 2000);
-
-        $('.counter-3').animateNumber({
-            number: 90, //change value here
-
-        }, 2000);
-
-        $('.counter-4').animateNumber({
-            number: 60, //change value here
-
-        }, 2000);
-
-        this.destroy();
-
-    }, {
-        offset: '80%'
-
-    });
-
-
-    /* ==========================================================================
-       Navbar button animation
-       ========================================================================== */
-
-
-
-
-    var btnCon = $('.navbar-nav #toggle, .mobile-nav a');
-
-    $(btnCon).on("click", function() {
+  /* ==========================================================================
+    Navbar button animation
+  ========================================================================== */
 
 
 
 
-        if ($(btnCon).hasClass('active')) {
-            $(btnCon).removeClass('active');
-        } else {
+  var btnCon = $('.navbar-nav #toggle, .mobile-nav a');
 
-            $(btnCon).addClass('active');
-        }
+  $(btnCon).on("click", function() {
+    if ($(btnCon).hasClass('active')) {
+      $(btnCon).removeClass('active');
+    } else {
+      $(btnCon).addClass('active');
+    }
 
-
-        $('#mobile-nav-overlay').toggleClass('open');
-    });
+    $('#mobile-nav-overlay').toggleClass('open');
+  });
 
 
 
@@ -103,204 +88,169 @@ $(function() {
 
 
 
-    /* ==========================================================================
+  /* ==========================================================================
    Reviews slider
-   ========================================================================== */
+  ========================================================================== */
+
+  $('.reviews-slider').owlCarousel({
+    navigation: false,
+    slideSpeed: 300,
+    paginationSpeed: 400,
+    singleItem: true,
+    transitionStyle: "fade",
+    autoPlay: 7000
+  });
 
 
 
-
-    $('.reviews-slider').owlCarousel({
-
-        navigation: false,
-        slideSpeed: 300,
-        paginationSpeed: 400,
-        singleItem: true,
-        transitionStyle: "fade",
-        autoPlay: 7000
-
-
-    });
-
-
-
-    /* ==========================================================================
-   Tooltip 
-   ========================================================================== */
+  /* ==========================================================================
+  Tooltip
+  ========================================================================== */
 
     $("[data-toggle=tooltip]").tooltip();
-		
 
+	/* ==========================================================================
+	  Popover
+	========================================================================== */
 
-	 /* ==========================================================================
-		 Popover
-	 ========================================================================== */
-	
 	 $('[data-toggle="popover"]').popover({
 			 placement: 'auto',
 			 trigger: 'hover focus'
-	
 	 });
 
 
-    /* ==========================================================================
+  /* ==========================================================================
    Play btn animation
-   ========================================================================== */
+  ========================================================================== */
+  $('.video-intro .play-btn i, .video-tour .play-btn i').waypoint(function() {
+      $(this.element).addClass('play-btn-animation');
+
+
+      this.destroy();
+
+  }, {
+      offset: '60%'
+  });
 
 
 
-    $('.video-intro .play-btn i, .video-tour .play-btn i').waypoint(function() {
-        $(this.element).addClass('play-btn-animation');
-
-
-        this.destroy();
-
-    }, {
-        offset: '60%'
-    });
-
-
-
-    /* ==========================================================================
+  /* ==========================================================================
    Team slider
-   ========================================================================== */
+  ========================================================================== */
+  var owlTeam = $('.team-slider');
 
+  owlTeam.owlCarousel({
 
-    var owlTeam = $('.team-slider');
+      itemsCustom: [
+          [0, 1],
+          [450, 1],
+          [600, 1],
+          [700, 2],
+          [1000, 3],
+          [1200, 3],
+          [1400, 3],
+          [1600, 3]
+      ],
+      navigation: true,
+      pagination: false,
+      navigationText: [
+          "<i class='fa fa-angle-left fa-2x'></i>",
+          "<i class='fa fa-angle-right fa-2x'></i>"
+      ]
 
-    owlTeam.owlCarousel({
-
-        itemsCustom: [
-            [0, 1],
-            [450, 1],
-            [600, 1],
-            [700, 2],
-            [1000, 3],
-            [1200, 3],
-            [1400, 3],
-            [1600, 3]
-        ],
-        navigation: true,
-        pagination: false,
-        navigationText: [
-            "<i class='fa fa-angle-left fa-2x'></i>",
-            "<i class='fa fa-angle-right fa-2x'></i>"
-        ]
-
-    });
+  });
 
 
 
 
-    /* ==========================================================================
+  /* ==========================================================================
    twitter reviews slider
-   ========================================================================== */
+  ========================================================================== */
+  var owl = $('.twitter-reviews-slider');
+  owl.owlCarousel({
+      itemsCustom: [
+          [0, 1],
+          [450, 1],
+          [600, 1],
+          [700, 2],
+          [1000, 3],
+          [1200, 3],
+          [1400, 3],
+          [1600, 3]
+      ],
+      navigation: false
 
-    var owl = $('.twitter-reviews-slider');
-
-    owl.owlCarousel({
-
-        itemsCustom: [
-            [0, 1],
-            [450, 1],
-            [600, 1],
-            [700, 2],
-            [1000, 3],
-            [1200, 3],
-            [1400, 3],
-            [1600, 3]
-        ],
-        navigation: false
-
-    });
+  });
 
 
-
-
-    /* ==========================================================================
+  /* ==========================================================================
    Chat button
-   ========================================================================== */
+  ========================================================================== */
+  $('.site-footer').waypoint(function() {
+    $('.chat-btn').addClass('fixed');
+  }, {
+    offset: '80%'
+  });
 
-
-    $('.site-footer').waypoint(function() {
-        $('.chat-btn').addClass('fixed');
-
-    }, {
-        offset: '80%'
-
-    });
-
-
-
-
-    /* ==========================================================================
+  /* ==========================================================================
    Contact form
-   ========================================================================== */
+  ========================================================================== */
 
+  var formFields = $('.contact-form form input, .contact-form form textarea');
+  $(formFields).on('focus', function() {
+      $(this).removeClass('input-error');
+  });
+  $('.contact-form form').submit(function(e) {
+      e.preventDefault();
+      $(formFields).removeClass('input-error');
+      var postdata = $('.contact-form form').serialize();
+      $.ajax({
+          type: 'POST',
+          url: 'php/contact.php',
+          data: postdata,
+          dataType: 'json',
+          success: function(json) {
 
-    var formFields = $('.contact-form form input, .contact-form form textarea');
+              if (json.nameMessage !== '') {
+                  $('.contact-form form .contact-name').addClass('input-error');
+              }
+              if (json.emailMessage !== '') {
+                  $('.contact-form form .contact-email').addClass('input-error');
+              }
+              if (json.messageMessage !== '') {
+                  $('.contact-form form textarea').addClass('input-error');
+              }
+              if (json.antispamMessage !== '') {
+                  $('.contact-form form .contact-antispam').addClass('input-error');
+              }
+              if (json.nameMessage === '' && json.emailMessage === '' && json.messageMessage === '' && json.antispamMessage === '') {
+                  $('.contact-form').fadeOut('3000', "linear", function() {
+                      $('.contact-form-success').slideToggle();
 
-
-
-    $(formFields).on('focus', function() {
-        $(this).removeClass('input-error');
-    });
-    $('.contact-form form').submit(function(e) {
-        e.preventDefault();
-        $(formFields).removeClass('input-error');
-        var postdata = $('.contact-form form').serialize();
-        $.ajax({
-            type: 'POST',
-            url: 'php/contact.php',
-            data: postdata,
-            dataType: 'json',
-            success: function(json) {
-
-                if (json.nameMessage !== '') {
-                    $('.contact-form form .contact-name').addClass('input-error');
-                }
-                if (json.emailMessage !== '') {
-                    $('.contact-form form .contact-email').addClass('input-error');
-                }
-                if (json.messageMessage !== '') {
-                    $('.contact-form form textarea').addClass('input-error');
-                }
-                if (json.antispamMessage !== '') {
-                    $('.contact-form form .contact-antispam').addClass('input-error');
-                }
-                if (json.nameMessage === '' && json.emailMessage === '' && json.messageMessage === '' && json.antispamMessage === '') {
-                    $('.contact-form').fadeOut('3000', "linear", function() {
-                        $('.contact-form-success').slideToggle();
-
-                    });
-                }
-            }
-        });
-    });
+                  });
+              }
+          }
+      });
+  });
 
 
 
 
-    /* ==========================================================================
+  /* ==========================================================================
    Smooth scroll
-   ========================================================================== */
+  ========================================================================== */
+  $('.navbar a, .mobile-nav a, .cta a').on('click', function() {
+      if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+              $('html, body').animate({
 
-
-    $('.navbar a, .mobile-nav a, .cta a').on('click', function() {
-        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html, body').animate({
-
-                    scrollTop: (target.offset().top - 80)
-                }, 1000);
-                return false;
-            }
-        }
-    });
-
-
-
+                  scrollTop: (target.offset().top - 80)
+              }, 1000);
+              return false;
+          }
+      }
+  });
 
 });

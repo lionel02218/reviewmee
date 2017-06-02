@@ -82,7 +82,7 @@ function initialize() {
     });
 
 
-    var image = 'img/flag.svg';
+    var image = '/img/flag.svg';
     marker = new google.maps.Marker({
         map: map,
         draggable: true,
@@ -124,5 +124,3 @@ google.maps.event.addDomListener(window, 'load', initialize);
 $('#modal-google-map').on('shown.bs.modal', function() {
     initialize();
 });
-
-
