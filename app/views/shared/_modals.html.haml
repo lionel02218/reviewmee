@@ -1,0 +1,83 @@
+/ Google map modal
+#modal-google-map.modal.fade{:role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-lg{:role => "document"}
+    .modal-content
+      %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+      .modal-body
+        .map
+          #map-canvas
+/ Google map modal end
+/ Site policy modal
+#modal-terms.modal.fade.site-policy{"aria-labelledby" => "ModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-lg{:role => "document"}
+    .modal-content
+      %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+      .modal-header
+        %h2#ModalLabel.modal-title.text-center Terms of Use
+      .modal-body
+        %p This privacy policy discloses the privacy practices for (website address). This privacy policy applies solely to information collected by this web site. It will notify you of the following:
+        %ul
+          %li What personally identifiable information is collected from you through the web site, how it is used and with whom it may be shared.
+          %li What choices are available to you regarding the use of your data.
+          %li The security procedures in place to protect the misuse of your information.
+          %li How you can correct any inaccuracies in the information.
+        %h3 Information Collection, Use, and Sharing
+        %p We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone.
+        %p We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request, e.g. to ship an order.
+        %p Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy.
+        %h3 Your Access to and Control Over Information
+        %p You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or phone number given on our website:
+        %ul
+          %li See what data we have about you, if any.
+          %li Change/correct any data we have about you.
+          %li Have us delete any data we have about you.
+          %li Express any concern you have about our use of your data.
+        %h3 Security
+        %p We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.
+        %p Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a closed lock icon at the bottom of your web browser, or looking for "https" at the beginning of the address of the web page.
+        %p While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.
+        %h3 Registration
+        %p In order to use this website, a user must first complete the registration form. During registration a user is required to give certain information (such as name and email address). This information is used to contact you about the products/services on our site in which you have expressed interest. At your option, you may also provide demographic information (such as gender or age) about yourself, but it is not required.
+        %h3 Orders
+        %p We request information from you on our order form. To buy from us, you must provide contact information (like name and shipping address) and financial information (like credit card number, expiration date). This information is used for billing purposes and to fill your orders. If we have trouble processing an order, we'll use this information to contact you.
+        %h3 Cookies
+        %p We use "cookies" on this site. A cookie is a piece of data stored on a site visitor's hard drive to help us improve your access to our site and identify repeat visitors to our site. For instance, when we use a cookie to identify you, you would not have to log in a password more than once, thereby saving time while on our site. Cookies can also enable us to track and target the interests of our users to enhance the experience on our site. Usage of a cookie is in no way linked to any personally identifiable information on our site.
+        %h3 Updates
+        %p Our Privacy Policy may change from time to time and all updates will be posted on this page.
+        %p
+          If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at
+          %a{:href => "tel:+1856-236-1853"} +1856-236-1853
+          or via email
+          %a{:href => "mailto:Contact@archer.com"} Contact@archer.com
+/ Site policy modal end
+/ contact form modal
+#modal-contact-form.modal.fade{:role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+      .modal-body
+        / contact form
+        .contact-form.text-center
+          %header.section-header
+            %img{:alt => "support icon", :src => "img/support-icon.svg"}/
+            %h2 Contact us
+            %h3 Have any questions? Send us a message.
+          %form.cta-form.cta-light{:action => "php/contact.php", :method => "post"}
+            .form-group
+              %input#contact-name.contact-name.form-control.input-lg{:name => "name", :placeholder => "Name *", :type => "text"}/
+            .form-group
+              %input#contact-email.contact-email.form-control.input-lg{:name => "email", :placeholder => "Email address *", :type => "text"}/
+            .form-group
+              %textarea#contact-message.contact-message.form-control.input-lg{:name => "message", :placeholder => "Message *", :rows => "4"}
+            .form-group
+              %input#contact-antispam.contact-antispam.form-control.input-lg{:name => "antispam", :placeholder => "Antispam question: 7 + 5 = ?", :type => "text"}/
+            %button.btn{:type => "submit"} SEND MESSAGE
+        / contact form end
+        %p.contact-form-success
+          %i.fa.fa-check
+          %span Thanks for contacting us!
+          We will get back to you very soon.
+/ contact form modal end

@@ -1,0 +1,63 @@
+- has_error = flash[:alert].present?
+/ content wrapper
+.content-wrapper
+  / logo
+  .logo-sl-page.text-center
+    %a{:href => root_path}
+      = image_tag "logo"
+  / logo end
+  / cta signin form
+  %section.cta-form.cta-light.section-spacing
+    .container
+      .row
+        .col-sm-8.col-md-5.center-block
+          = form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "cta-signin-form", id: "cta-signin-form" }) do |f|
+            %header.section-header.text-center
+              %h2 Hello again
+            - if has_error
+              .alert.alert-danger{role: 'alert'}
+                %p
+                  = glyphicon('exclamation-sign')
+                  = flash[:alert]
+            .form-group
+              = f.email_field :email, autofocus: true, id: "input-email", class: "form-control input-lg", placeholder: "Email address"
+            .form-group
+              = f.password_field :password, autocomplete: "off", id: "input-password", class: "form-control input-lg", placeholder: "Password"
+            .text-right.forgot-password
+              %a{:href => new_password_path(:user)} Forgot your password?
+            .form-btn
+              = f.submit "SIGN IN", class: "btn"
+            %h3.text-center
+              Don't have an account yet?
+              %a{:href => new_registration_path(:user)} Sign up
+      .row
+        .col-sm-9.col-md-6.center-block.text-center
+          .form-option Or
+          .form-signup-google
+            %a.btn{:href => ""}
+              %i.fa.fa-google>
+              Sign in with Google
+          .form-signup-facebook
+            %a.btn{:href => ""}
+              %i.fa.fa-facebook>
+              Sign in with facebook
+  / cta signin form end
+  / chat btn
+  %a.chat-btn{"data-target" => "#modal-contact-form", "data-toggle" => "modal", :href => ""}
+  / chat btn
+  / Copyright terms
+  %footer.copyright-terms
+    .container
+      .row
+        .col-sm-5.col-md-6
+          %small © 2016 Archer. All rights reserved.
+        .col-sm-7.col-md-6
+          %ul.terms-privacy
+            %li
+              %a{:href => "index.html"} Home
+            %li
+              %a{"data-target" => "#modal-terms", "data-toggle" => "modal", :href => ""} Terms
+            %li
+              %a{"data-target" => "#modal-terms", "data-toggle" => "modal", :href => ""} Privacy
+  / Copyright terms end
+/ content wrapper end

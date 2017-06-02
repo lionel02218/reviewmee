@@ -1,0 +1,44 @@
+/ navigation
+%nav.navbar.navbar-default{"data-offset-top" => "450", "data-spy" => "affix"}
+  .container
+    .navbar-header
+      %a.navbar-brand{:href => ""}
+        %img.logo{:alt => "logo", :src => "img/logo.svg"}/
+        %img.logo-nav{:alt => "logo-nav", :src => "img/logo-nav.svg"}/
+    %ul.nav.navbar-nav.navbar-right
+      %li.hidden-xs.hidden-sm
+        %a{:href => "#features"} Features
+      %li.hidden-xs.hidden-sm
+        %a{:href => "#pricing"} Pricing
+      %li.hidden-xs.hidden-sm
+        %a{:href => "#reviews"} Reviews
+      - if current_user.present?
+        %li= link_to("Sign Out", destroy_user_session_path, method: :delete)
+      - else
+        %li.hidden-xs
+          %a{:href => new_session_path(:user)} Sign In
+        %li
+          %a.btn.btn-nav{:href => new_registration_path(:user)} Sign Up
+      %li.hidden-md.hidden-lg
+        %a#toggle
+          %i.fa.fa-bars.fa-2x
+          %i.fa.fa-times.fa-2x
+/ navigation end
+/ mobile navigation
+#mobile-nav-overlay.mobile-nav-overlay.hidden-md.hidden-lg
+  %nav.mobile-nav
+    %ul
+      %li
+        %a{:href => "#features"} Features
+      %li
+        %a{:href => "#pricing"} Pricing
+      %li
+        %a{:href => "#reviews"} Reviews
+      %li
+        %a{:href => "#faq"} FAQ
+      %li
+        %a{:href => "#team"} Team
+      - unless current_user.present?
+        %li.hidden-sm
+          %a{:href => new_session_path(:user)} Sign In
+/ mobile navigation end

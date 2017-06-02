@@ -1,0 +1,83 @@
+/ content wrapper
+.content-wrapper
+  / logo
+  .logo-sl-page.text-center
+    %a{:href => root_path}
+      = image_tag "logo"
+  / logo end
+  / cta signup form
+  %section.cta-form.cta-light.section-spacing
+    .container
+      .row
+        .col-sm-8.col-md-5.center-block
+          = form_for(resource, as: resource_name, url: registration_path(resource_name), class: "cta-signup-form", id: "cta-signup-form") do |f|
+            %header.section-header.text-center
+              %h2 Create your account
+            = devise_error_messages!
+            .form-group
+              = f.text_field :name, autofocus: true, class: "form-control input-lg", id: "input-name", required: true, placeholder: "Your name"
+              %label{:for => "input-name"}
+                %span.required> *
+                First name and last name
+            .form-group
+              = f.email_field :email, class: "form-control input-lg", id: "input-email", placeholder: "Email address"
+              %label{:for => "input-email"}
+                %span.required> *
+                Details will be sent to this email
+            .form-group
+              = f.password_field :password, autocomplete: "off", id: "input-password", class: "form-control input-lg", placeholder: "Password", required: true
+              %label{:for => "input-password"}
+                %span.required> *
+                Minimum of 8 characters
+            .form-group
+              = f.password_field :password_confirmation, autocomplete: "off", id: "input-password-confirmation", class: "form-control input-lg", placeholder: "Confirmation Password", required: true
+              %label{:for => "input-password"}
+                %span.required> *
+                Minimum of 8 characters
+
+            .checkbox.text-right
+              %label
+                %input{:type => "checkbox"}/
+                Signup to our newletter
+            .form-btn
+              = f.submit "SIGN UP", class: "btn"
+              %p.form-terms
+                By clicking sign up you agree to our
+                %a{"data-target" => "#modal-terms", "data-toggle" => "modal", :href => ""} Terms
+                and read our
+                = succeed "." do
+                  %a{"data-target" => "#modal-terms", "data-toggle" => "modal", :href => ""} Privacy Policy
+            %h3.text-center
+              Already have an account?
+              %a{:href => new_session_path(:user)} Sign in
+      .row
+        .col-sm-9.col-md-6.center-block.text-center
+          .form-option Or
+          .form-signup-google
+            %a.btn{:href => ""}
+              %i.fa.fa-google>
+              Sign up with Google
+          .form-signup-facebook
+            %a.btn{:href => ""}
+              %i.fa.fa-facebook>
+              Sign up with facebook
+  / cta signup form end
+  / chat btn
+  %a.chat-btn{"data-target" => "#modal-contact-form", "data-toggle" => "modal", :href => ""}
+  / chat btn
+  / Copyright terms
+  %footer.copyright-terms
+    .container
+      .row
+        .col-sm-5.col-md-6
+          %small © 2016 Archer. All rights reserved.
+        .col-sm-7.col-md-6
+          %ul.terms-privacy
+            %li
+              %a{:href => "index.html"} Home
+            %li
+              %a{"data-target" => "#modal-terms", "data-toggle" => "modal", :href => ""} Terms
+            %li
+              %a{"data-target" => "#modal-terms", "data-toggle" => "modal", :href => ""} Privacy
+  / Copyright terms end
+/ content wrapper end

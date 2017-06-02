@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reviewmee</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render "shared/css"%>
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= render "shared/modals" %>
+    <%= render "shared/js"%>
+  </body>
+</html>
