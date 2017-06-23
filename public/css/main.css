@@ -1,7 +1,7 @@
 
 /* ==========================================================================
    Style sheet for Archer - Responsive Landing Page
-   ========================================================================== 
+   ==========================================================================
 
    Version: 1.0
    Author: Pixininja
@@ -11,8 +11,8 @@
 
 /* ==========================================================================
    Table Of Content
-   ========================================================================== 
-   
+   ==========================================================================
+
     1.General
     2.Hero section
     3.Navbar
@@ -45,16 +45,16 @@
     30.Signup Page
     31.Signin Page
     32.Small devices (tablets, 768px and up)
-    33. Medium devices (desktops, 992px and up) 
-  
+    33. Medium devices (desktops, 992px and up)
+
 */
-   
-  
+
+
 
 /* ==========================================================================
    1.General
    ========================================================================== */
-   
+
 html.sl-page,
 body.sl-page { height: 100%; }
 
@@ -86,7 +86,7 @@ h6 {
 }
 
 a {
-  color: #31aff5;
+  color: #57cadf;
   transition: all 0.3s ease-in-out;
 }
 
@@ -115,10 +115,10 @@ strong { font-weight: 700; }
 
 /* ==========================================================================
    2.Hero section
-   ========================================================================== */ 
-   
+   ========================================================================== */
+
 .hero-section {
-  background: url(../img/bg-hero.jpg) center center no-repeat;
+  background: url(../img/bg-hero1.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
   image-rendering: -moz-crisp-edges;
@@ -141,7 +141,7 @@ strong { font-weight: 700; }
   right: 0;
 }
 
-.hero-section::before { background: rgba(35, 35, 35, 0.67); }
+.hero-section::before { background: rgba(10, 10, 10, 0.1); }
 
 .welcome-message { padding: 9em 15px 15em; }
 
@@ -179,7 +179,7 @@ strong { font-weight: 700; }
   font-size: 14px;
   text-align: center;
   text-decoration: none;
-  background-color: #31aff5;
+  background-color: #57cadf;
   line-height: 1.5;
   border: none;
   border-radius: 4px;
@@ -232,7 +232,7 @@ strong { font-weight: 700; }
 /* ==========================================================================
    3.Navbar
    ========================================================================== */
-   
+
 .navbar-default {
   background-color: transparent;
   border: none;
@@ -331,12 +331,12 @@ strong { font-weight: 700; }
 .navbar-nav .active .fa-times:hover,
 .navbar-nav .active .fa-times:active,
 .navbar-nav .active .fa-times:focus {
-  color: #31aff5;
+  color: #57cadf;
   background-color: transparent;
 }
 
 .affix .navbar-nav > li > a.btn-nav {
-  background: #31aff5;
+  background: #57cadf;
   color: #fff;
 }
 
@@ -350,7 +350,7 @@ strong { font-weight: 700; }
 /* ==========================================================================
    4.Navbar mobile
    ========================================================================== */
-   
+
 .navbar-nav .fa-2x { font-size: 1.5em; }
 
 .navbar-nav #toggle {
@@ -463,7 +463,7 @@ strong { font-weight: 700; }
 /* ==========================================================================
    5.How it works
    ========================================================================== */
-   
+
 .how-it-works .row:not(:last-child) { margin-bottom: 3em; }
 
 .how-it-works.section-spacing { padding-top: 7.5em; }
@@ -471,7 +471,7 @@ strong { font-weight: 700; }
 .step-number {
   width: 68px;
   height: 68px;
-  background: #31aff5;
+  background: #57cadf;
   border-radius: 50%;
   color: #fff;
   font-size: 24px;
@@ -557,7 +557,7 @@ strong { font-weight: 700; }
 /* ==========================================================================
    7. video intro
    ========================================================================== */
-   
+
 .features,
 .cta,
 .pricing,
@@ -651,11 +651,11 @@ strong { font-weight: 700; }
 /* ==========================================================================
    8. User reviews
    ========================================================================== */
-   
+
 .center-block[class^="col-"] { float: none; }
 
 .user-reviews,
-.cta-footer { background-color: #31aff5; }
+.cta-footer { background-color: #57cadf; }
 
 blockquote {
   padding: 0;
@@ -709,7 +709,7 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
    9.Learn more
    ========================================================================== */
-   
+
 .learn-more .container > .row { padding-bottom: 3.75em; }
 
 .learn-more .container > .row:last-child {
@@ -763,8 +763,8 @@ blockquote cite i { font-weight: 400; }
 }
 
 .cta h2 em {
-  color: #31aff5;
-  border-bottom: 3px solid #31aff5;
+  color: #57cadf;
+  border-bottom: 3px solid #57cadf;
 }
 
 .cta h2 em,
@@ -776,7 +776,7 @@ blockquote cite i { font-weight: 400; }
 
 .cta .btn {
   background: transparent;
-  border: 2px solid #31aff5;
+  border: 2px solid #57cadf;
   color: #091d25;
 }
 
@@ -785,14 +785,14 @@ blockquote cite i { font-weight: 400; }
 .cta .btn:focus,
 .cta .btn:active:hover,
 .cta .btn:active:focus {
-  background: #31aff5;
+  background: #57cadf;
   color: #fff;
 }
 
 /* ==========================================================================
    11.New feature
    ========================================================================== */
-   
+
 .new-feature h2 {
   margin: 0 0 24px;
   font-size: 30px;
@@ -816,13 +816,14 @@ blockquote cite i { font-weight: 400; }
 .pointer {
   width: 30px;
   height: 30px;
-  background: #31aff5;
+  background: #57cadf;
   font-size: 16px;
   cursor: pointer;
   color: #fff;
   display: block;
   position: absolute;
-  border-radius: 50%;
+  border-radius: 2
+	  0%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -928,21 +929,26 @@ blockquote cite i { font-weight: 400; }
 }
 
 .pointer-1 {
-  top: 20%;
-  left: 30%;
+  top: 16%;
+  left: 58%;
 }
 
 .pointer-2 {
-  top: 60%;
-  right: 20%;
+  top: 27%;
+  right: 31%;
+}
+
+.pointer-3 {
+  top: 80%;
+  right: 31%;
 }
 
 /* ==========================================================================
    12.cta into
    ========================================================================== */
-   
+
 .cta-info .section-spacing {
-  background: #31aff5;
+  background: #57cadf;
   padding: 3.75em 2em;
 }
 
@@ -974,13 +980,13 @@ blockquote cite i { font-weight: 400; }
 .btn-secondary:active:hover,
 .btn-secondary:active:focus {
   background: #fff;
-  color: #31aff5;
+  color: #57cadf;
 }
 
 /* ==========================================================================
    13.Pricing
    ========================================================================== */
-   
+
 .pricing .row > div[class^="col-"] { margin-bottom: 2.25em; }
 
 .pricing .row > div[class^="col-"]:first-child { margin-bottom: 3.9375em; }
@@ -995,7 +1001,7 @@ blockquote cite i { font-weight: 400; }
 .plan-popular.pricing-table-container::before {
   background: #ec407a;
   color: #fff;
-  content: 'Best value';
+  content: 'Limited Offer';
   font-size: 14px;
   padding: 3px 10px;
   position: absolute;
@@ -1015,7 +1021,7 @@ blockquote cite i { font-weight: 400; }
 
 .plan-price h5 {
   font-size: 54px;
-  color: #31aff5;
+  color: #57cadf;
   text-transform: uppercase;
   margin: 36px 0 24px;
 }
@@ -1057,11 +1063,11 @@ blockquote cite i { font-weight: 400; }
 
 .tooltip-inner {
   box-shadow: 0 0 5px 0 rgba(148,148,148,0.5);
-  background-color: #31aff5;
+  background-color: #57cadf;
   padding: 6px 8px;
 }
 
-.tooltip.top .tooltip-arrow { border-top-color: #31aff5; }
+.tooltip.top .tooltip-arrow { border-top-color: #57cadf; }
 
 /* ==========================================================================
    14.Testimonial
@@ -1094,7 +1100,7 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
    15.FAQ
    ========================================================================== */
-   
+
 .faq-list { margin: 0 0 .75em; }
 
 .faq-list .col-sm-6 { margin-bottom: 2.25em; }
@@ -1105,7 +1111,7 @@ blockquote cite i { font-weight: 400; }
 }
 
 .faq-support {
-  background-color: #31aff5;
+  background-color: #57cadf;
   padding: 3.75em 0;
 }
 
@@ -1139,12 +1145,12 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
    16.cta signup form
    ========================================================================== */
-   
+
 .cta-dark { background: #212a3e; }
 
 .cta-dark .section-header h2 { color: #fff; }
 
-.cta-dark .section-header h3 { color: #31aff5; }
+.cta-dark .section-header h3 { color: #57cadf; }
 
 .cta-form .form-group { margin-bottom: 24px; }
 
@@ -1258,7 +1264,7 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
     17.clients
    ========================================================================== */
-   
+
 .trusted-clients h2 {
   font-size: 30px;
   text-align: center;
@@ -1285,14 +1291,14 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
   18.Product statistics
    ========================================================================== */
-   
+
 
 
 .product-statistics [class^="col-"] { margin-bottom: 2.25em; }
 
 .product-statistics i {
   font-size: 40px;
-  color: #31aff5;
+  color: #57cadf;
   transition: all .3s ease;
 }
 
@@ -1319,7 +1325,7 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
    19.Video tour
    ========================================================================== */
-   
+
 .video-tour {
   background: url(../img/bg-video-tour.jpg) center center no-repeat;
   background-size: cover;
@@ -1496,8 +1502,8 @@ blockquote cite i { font-weight: 400; }
   background: transparent;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  color: #31aff5;
-  border: 1px solid #31aff5;
+  color: #57cadf;
+  border: 1px solid #57cadf;
 }
 
 .team-details .owl-theme .owl-controls.clickable .owl-buttons div:hover {
@@ -1508,7 +1514,7 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
    21.cta footer
    ========================================================================== */
-   
+
 .cta-footer h2 {
   font-size: 32px;
   color: #fff;
@@ -1540,12 +1546,12 @@ blockquote cite i { font-weight: 400; }
 
 .twitter-reviews .owl-theme .owl-controls { margin-top: 24px; }
 
-.twitter-reviews .owl-theme .owl-controls .owl-page span { background: #31aff5; }
+.twitter-reviews .owl-theme .owl-controls .owl-page span { background: #57cadf; }
 
 /* ==========================================================================
     23.App download
    ========================================================================== */
-   
+
 .app-download {
   background: url(../img/bg-app.jpg) right center no-repeat;
   background-size: cover;
@@ -1585,7 +1591,7 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
     24.Features cta
    ========================================================================== */
-   
+
 .features-cta { overflow-x: hidden; }
 
 .feature-cta-list { margin: 48px 0 36px; }
@@ -1597,7 +1603,7 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
     25.Site footer
    ========================================================================== */
-   
+
 
 
 .site-footer h3 {
@@ -1617,7 +1623,7 @@ blockquote cite i { font-weight: 400; }
 }
 
 .sub-form .form-control:focus {
-  border-color: #31aff5;
+  border-color: #57cadf;
   background-color: #fff;
 }
 
@@ -1678,9 +1684,9 @@ blockquote cite i { font-weight: 400; }
   width: 53px;
   height: 53px;
   line-height: 53px;
-  border: 1px solid #31aff5;
+  border: 1px solid #57cadf;
   font-size: 30px;
-  color: #31aff5;
+  color: #57cadf;
   border-radius: 50%;
 }
 
@@ -1716,7 +1722,7 @@ blockquote cite i { font-weight: 400; }
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #31aff5 url(../img/chat-icon.svg) center center no-repeat;
+  background: #57cadf url(../img/chat-icon.svg) center center no-repeat;
   position: fixed;
   bottom: 120px;
   right: 30px;
@@ -1737,9 +1743,9 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
    26.Copyright terms
    ========================================================================== */
-   
-   
-   
+
+
+
 .copyright-terms { padding: 2.25em 0; }
 
 .copyright-terms small,
@@ -1829,7 +1835,7 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
    28.site policy modal
    ========================================================================== */
-   
+
 .site-policy .modal-content { padding: 1.5em; }
 
 .site-policy .modal-header {
@@ -1851,7 +1857,7 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
    29.Contact form
    ========================================================================== */
-   
+
 #modal-contact-form .modal-body { padding: 3em 1em; }
 
 .contact-form .section-header { margin-bottom: 3em; }
@@ -1895,7 +1901,7 @@ blockquote cite i { font-weight: 400; }
    30.Signup Page
    ========================================================================== */
 
-   
+
 .content-wrapper {
   background: url(../img/bg-form-page.jpg) center center no-repeat;
   background-size: cover;
@@ -1934,7 +1940,7 @@ blockquote cite i { font-weight: 400; }
   color: #848e92;
 }
 
-.cta-light .form-control:focus { border-color: #31aff5; }
+.cta-light .form-control:focus { border-color: #57cadf; }
  .cta-light input::-webkit-input-placeholder, .cta-light textarea::-webkit-input-placeholder {
  color: #6b777c;
  font-weight: 400;
@@ -1986,7 +1992,7 @@ blockquote cite i { font-weight: 400; }
 /* ==========================================================================
    32.Small devices (tablets, 768px and up)
    ========================================================================== */
-   
+
 @media (min-width: 768px) {
 
 h1,
@@ -2141,9 +2147,9 @@ h6,
 }
 
 /* ==========================================================================
-   33. Medium devices (desktops, 992px and up) 
+   33. Medium devices (desktops, 992px and up)
    ========================================================================== */
-   
+
 @media (min-width: 992px) {
 
 .welcome-message {

@@ -2,49 +2,52 @@
 %section.container.welcome-message.text-center
   .row
     .col-md-5
-      %h1 Landing page for your product or service
-      %h2 Use this template to promote and describe the benefits of your product.
+      %h1
+        Reviews, referrals and testimonials,
+        %br/
+        all under one roof
+      %h2 A professional way to pitch your work.
       %ul.benefits-cta-list
         / benefits 1
         %li
-          %i.fa.fa-check{"aria-hidden" => "true"}
-          Pellentesque varius finibus condimentum
+          %em.fa.fa-check{"aria-hidden" => "true"}
+          Free account for the first 5,000 subscribers
         / benefits 1 end
         / benefits 2
         %li
-          %i.fa.fa-check{"aria-hidden" => "true"}
-          Quisque molestie laoreet vitae
+          %em.fa.fa-check{"aria-hidden" => "true"}
+          Links with all your online profiles
         / benefits 2 end
         / benefits 3
         %li
-          %i.fa.fa-check{"aria-hidden" => "true"}
-          Maecenas fringilla purus dapibus
+          %em.fa.fa-check{"aria-hidden" => "true"}
+          Reviews can be set to private or public
         / benefits 3 end
-    .col-md-7
-      .embed-responsive.embed-responsive-16by9.text-center
-        / youtube
-        %iframe.embed-responsive-item{:src => "http://www.youtube.com/embed/ofI0kpdKAIk?rel=0&showinfo=0&controls=0&iv_load_policy=3"}
-        / youtube end
-        / For vimeo
-        / <iframe class="embed-responsive-item" src="http://player.vimeo.com/video/xxxxxxxxxxx?title=0&byline=0&portrait=0&color=ffffff"></iframe>
-        / vimeo end
-  .hero-sub-form
-    .row
-      .col-md-12.sub-form
-        %h3 Enter your email address below and join the waiting list
-        %form#mc-form
-          #mc-error
-            %i.fa.fa-exclamation-triangle
-            Please enter a value
-          #mc-success
-            %i.fa.fa-envelope
-            Awesome! We have sent you a confirmation email
-          .input-group
-            %i.fa.fa-envelope
-            %input#mc-email.form-control.input-lg{:placeholder => "Email Address", :required => "", :type => "email"}/
-            %span.input-group-btn
-              %button.btn{:type => "submit"} GET STARTED
-        %p.form-terms
-          By signing up you agree to our
-          %a{"data-target" => "#modal-terms", "data-toggle" => "modal", :href => ""} terms
+        / benefits 4
+        %li
+          %em.fa.fa-check{"aria-hidden" => "true"}
+          Convenient and easy to use
+        / benefits 4 end
+        / benefits 5
+        %li
+          %em.fa.fa-check{"aria-hidden" => "true"}
+          Look the part using a third party provider
+        / benefits 5 end
+%section#join.hero-sub-form
+  .row
+    .col-md-12.sub-form
+      %h3 First 5,000 subscribers get free unlimited access.
+      %p What are you waiting for?
+      %form#mc-form
+        #mc-error
+          %i.fa.fa-exclamation-triangle
+          Please enter a value
+        #mc-success
+          %i.fa.fa-envelope
+          Awesome! We have sent you a confirmation email
+        .input-group
+          %i.fa.fa-envelope
+          %input#mc-email.form-control.input-lg{:placeholder => "Email address", :required => "", :type => "email"}/
+          %span.input-group-btn
+            %button.btn{:type => "submit"} Join
 / welcome message end

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="166px" height="50px" viewBox="0 0 166 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-nav</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo-nav">
+            <g transform="translate(1.000000, -7.000000)">
+                <g id="reviewmee">
+                    <g id="Group">
+                        <text id="review" fill="#09A2BE" font-family="Helvetica-Light, Helvetica" font-size="33" font-weight="300">
+                            <tspan x="0" y="32">review</tspan>
+                        </text>
+                        <text id="mee" fill="#50CDE3" font-family="Helvetica" font-size="33" font-weight="normal">
+                            <tspan x="94.614" y="32">mee</tspan>
+                        </text>
+                        <text id="empowering-your-great-work" fill="#09A2BE" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300">
+                            <tspan x="3" y="49">empowering your great work</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group-2" transform="translate(1.000000, 39.000000)">
+                    <g id="empowering-your-grea"></g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

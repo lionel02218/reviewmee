@@ -1,0 +1,19 @@
+# ---
+# development:
+#   cloud_name: lionel-cloudinary
+#   api_key: '278393461982773'
+#   api_secret: MNupHABF5KvwfZ6XMMOROrJIAnQ
+#   enhance_image_tag: true
+#   static_image_support: false
+# production:
+#   cloud_name: lionel-cloudinary
+#   api_key: '278393461982773'
+#   api_secret: MNupHABF5KvwfZ6XMMOROrJIAnQ
+#   enhance_image_tag: true
+#   static_image_support: true
+# test:
+#   cloud_name: lionel-cloudinary
+#   api_key: '278393461982773'
+#   api_secret: MNupHABF5KvwfZ6XMMOROrJIAnQ
+#   enhance_image_tag: true
+#   static_image_support: false

@@ -1,58 +1,32 @@
-/ Site footer
 %footer.site-footer.section-spacing
   .container
     .row.footer-col-spacing
       .col-md-2.footer-logo
         %a{:href => ""}
-          %img{:alt => "logo footer", :src => "/img/logo-nav.svg"}/
-      .col-sm-4.col-md-2
-        %ul.footer-nav
-          %li
-            %h3 LEARN MORE
-          %li
-            %a{:href => ""} Pricing
-          %li
-            %a{:href => ""} Reviews
-          %li
-            %a{:href => ""} Features
-          %li
-            %a{:href => ""} Register
-      .col-sm-4.col-md-2
-        %ul.footer-nav
-          %li
-            %h3 Resources
-          %li
-            %a{:href => ""} Support
-          %li
-            %a{:href => ""} Blog
-          %li
-            %a{:href => ""} API
-          %li
-            %a{:href => ""} Affiliates
+          %img{:alt => "logo footer", :src => "img/logo-nav1.svg"}/
+      .col-md-2  
       .col-sm-4.col-md-3
         %ul.footer-nav
           %li
             %h3 CONTACT US
-          %li 4751 Clarksburg Park Road
           %li
-            Call us
-            %a{:href => "tel:+1856-236-1853"} +1856-236-1853
-          %li
-            %a{:href => "mailto:Contact@archer.com"} Contact@archer.com
+            %a{:href => "mailto:info@reviewmee.com"} info@reviewmee.com
+          %li Melbourne, VIC 3000, Australia
           %li
             %a{"data-target" => "#modal-google-map", "data-toggle" => "modal", :href => ""} Locate on Google Map
       / Use clearfix after every 12 columns
       .clearfix.visible-sm-block
-      .col-md-3
+      .col-md-3.col-lg-offset-1
         %ul.social
           %li
-            %a.a-facebook{:href => ""}
+            %a.a-facebook{:href => "https://www.facebook.com/reviewmee"}
               %i.fa.fa-facebook
           %li
-            %a.a-twitter{:href => ""}
+            %a.a-twitter{:href => "https://www.twitter.com/reviewmee"}
               %i.fa.fa-twitter
           %li
-            %a.a-google-plus{:href => ""}
-              %i.fa.fa-google-plus
+            %a.a-medium{:href => "https://www.medium.com/@reviewmee"}
+              %i.fa.fa-medium
   %a.chat-btn{"data-target" => "#modal-contact-form", "data-toggle" => "modal", :href => ""}
-/ Site footer end
+
+= render "shared/modals"

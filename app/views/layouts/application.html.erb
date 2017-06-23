@@ -10,12 +10,13 @@
     <%= render "shared/css"%>
   </head>
 
-  <body>
+  <body style="background-color:black">
     <header class="hero-section">
       <%= render "shared/navbar" %>
-      <%= render "shared/welcome_section" %>
     </header>
+
     <%= yield %>
+
     <%= render "shared/footer"%>
     <%= render "shared/copy_right"%>
     <%= render "shared/js"%>

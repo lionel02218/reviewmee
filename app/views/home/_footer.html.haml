@@ -1,11 +1,30 @@
-/ CTA footer
-%section.cta-footer.section-spacing.text-center
+%footer.site-footer.section-spacing
   .container
-    .row
-      .col-md-12
-        %h2
-          Signup for a 30 days
-          %em free
-          trial account.
-          %a.btn.btn-secondary{:href => new_registration_path(:user)} Get Started
-/ CTA footer end
+    .row.footer-col-spacing
+      .col-md-2.footer-logo
+        %a{:href => ""}
+          %img{:alt => "logo footer", :src => "img/logo-nav.svg"}/
+      .col-md-2  
+      .col-sm-4.col-md-3
+        %ul.footer-nav
+          %li
+            %h3 CONTACT US
+          %li
+            %a{:href => "mailto:info@reviewmee.com"} info@reviewmee.com
+          %li Melbourne, VIC 3000, Australia
+          %li
+            %a{"data-target" => "#modal-google-map", "data-toggle" => "modal", :href => ""} Locate on Google Map
+      / Use clearfix after every 12 columns
+      .clearfix.visible-sm-block
+      .col-md-3.col-lg-offset-1
+        %ul.social
+          %li
+            %a.a-facebook{:href => "https://www.facebook.com/reviewmee"}
+              %i.fa.fa-facebook
+          %li
+            %a.a-twitter{:href => "https://www.twitter.com/reviewmee"}
+              %i.fa.fa-twitter
+          %li
+            %a.a-medium{:href => "https://www.medium.com/@reviewmee"}
+              %i.fa.fa-medium
+  %a.chat-btn{"data-target" => "#modal-contact-form", "data-toggle" => "modal", :href => ""}

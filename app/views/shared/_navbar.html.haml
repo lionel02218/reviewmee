@@ -3,22 +3,21 @@
   .container
     .navbar-header
       %a.navbar-brand{:href => ""}
-        %img.logo{:alt => "logo", :src => "/img/logo.svg"}/
-        %img.logo-nav{:alt => "logo-nav", :src => "/img/logo-nav.svg"}/
+        %img.logo{:alt => "logo", :src => "img/logo1.svg"}/
+        %img.logo-nav{:alt => "logo-nav", :src => "img/logo-nav1.svg"}/
     %ul.nav.navbar-nav.navbar-right
       %li.hidden-xs.hidden-sm
         %a{:href => "#features"} Features
       %li.hidden-xs.hidden-sm
-        %a{:href => "#pricing"} Pricing
+        %a{:href => "#selfemployed"} Self Employed
       %li.hidden-xs.hidden-sm
-        %a{:href => "#reviews"} Reviews
-      - if current_user.present?
-        %li= link_to("Sign Out", destroy_user_session_path, method: :delete)
-      - else
-        %li.hidden-xs
-          %a{:href => new_session_path(:user)} Sign In
-        %li
-          %a.btn.btn-nav{:href => new_registration_path(:user)} Sign Up
+        %a{:href => "#business"} Business
+      %li.hidden-xs.hidden-sm
+        %a{:href => "#students"} Students
+      %li.hidden-xs.hidden-sm
+        %a{:href => "#howitworks"} How it works
+      %li.hidden-xs.hidden-sm
+        %a{:href => "#join"} Join
       %li.hidden-md.hidden-lg
         %a#toggle
           %i.fa.fa-bars.fa-2x
@@ -31,14 +30,13 @@
       %li
         %a{:href => "#features"} Features
       %li
-        %a{:href => "#pricing"} Pricing
+        %a{:href => "#selfemployed"} Self Employed
       %li
-        %a{:href => "#reviews"} Reviews
+        %a{:href => "#business"} Business
       %li
-        %a{:href => "#faq"} FAQ
+        %a{:href => "#students"} Students
       %li
-        %a{:href => "#team"} Team
-      - unless current_user.present?
-        %li.hidden-sm
-          %a{:href => new_session_path(:user)} Sign In
+        %a{:href => "#howitworks"} How it works
+      %li
+        %a{:href => "#join"} Join
 / mobile navigation end

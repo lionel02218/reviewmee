@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="119px" height="34px" viewBox="0 0 119 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" font-family="Helvetica-Light, Helvetica" fill="#FFFFFF" font-weight="300">
+            <g id="Group-2" transform="translate(0.000000, 17.000000)" font-size="9">
+                <text id="empowering-your-grea">
+                    <tspan x="0" y="13">empowering your great work</tspan>
+                </text>
+            </g>
+            <text id="reviewmee" font-size="24">
+                <tspan x="-1" y="17">review</tspan>
+                <tspan x="67.904" y="17" font-family="Helvetica" font-weight="normal">mee</tspan>
+            </text>
+        </g>
+        <g id="Group-3" transform="translate(-1.000000, -1.000000)">
+            <g id="Group"></g>
+        </g>
+    </g>
+</svg>
