@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     get :profile
     post :setup_profile
   end
+  post :subscribe, to: 'home#subscribe'
   root "home#index"
 end

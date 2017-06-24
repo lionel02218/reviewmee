@@ -38,16 +38,16 @@
     .col-md-12.sub-form
       %h3 First 5,000 subscribers get free unlimited access.
       %p What are you waiting for?
-      %form#mc-form
+      = form_tag subscribe_path, id:"mc-form", remote: true do
         #mc-error
           %i.fa.fa-exclamation-triangle
-          Please enter a value
+          Already subscribed or invalid email
         #mc-success
           %i.fa.fa-envelope
           Awesome! We have sent you a confirmation email
         .input-group
           %i.fa.fa-envelope
-          %input#mc-email.form-control.input-lg{:placeholder => "Email address", :required => "", :type => "email"}/
+          %input#mc-email.form-control.input-lg{:placeholder => "Email address", :required => true, :type => "email", name: 'email'}/
           %span.input-group-btn
             %button.btn{:type => "submit"} Join
 / welcome message end

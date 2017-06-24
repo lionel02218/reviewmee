@@ -47,10 +47,8 @@
         %h3 Updates
         %p Our Privacy Policy may change from time to time and all updates will be posted on this page.
         %p
-          If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at
-          %a{:href => "tel:+1856-236-1853"} +1856-236-1853
-          or via email
-          %a{:href => "mailto:Contact@archer.com"} Contact@archer.com
+          If you feel that we are not abiding by this privacy policy, you should contact us immediately via email
+          %a{:href => "mailto:info@reviewmee.com"} info@reviewmee.com
 / Site policy modal end
 / contact form modal
 #modal-contact-form.modal.fade{:role => "dialog", :tabindex => "-1"}
@@ -62,7 +60,7 @@
         / contact form
         .contact-form.text-center
           %header.section-header
-            %img{:alt => "support icon", :src => "/img/support-icon.svg"}/
+            %img{:alt => "support icon", :src => "img/support-icon.svg"}/
             %h2 Contact us
             %h3 Have any questions? Send us a message.
           %form.cta-form.cta-light{:action => "php/contact.php", :method => "post"}
@@ -73,8 +71,8 @@
             .form-group
               %textarea#contact-message.contact-message.form-control.input-lg{:name => "message", :placeholder => "Message *", :rows => "4"}
             .form-group
-              %input#contact-antispam.contact-antispam.form-control.input-lg{:name => "antispam", :placeholder => "Antispam question: 7 + 5 = ?", :type => "text"}/
-            %button.btn{:type => "submit"} SEND MESSAGE
+              %input#contact-antispam.contact-antispam.form-control.input-lg{:name => "antispam", :placeholder => "Are you a robot? 7 + 3 = ?", :type => "text"}/
+            %button.btn{:type => "submit"} Submit
         / contact form end
         %p.contact-form-success
           %i.fa.fa-check

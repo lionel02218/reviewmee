@@ -1,0 +1,7 @@
+<% if @subscribed %>
+  $('#mc-error').slideUp();
+  $('#mc-success').slideDown();
+<% else %>
+  $('#mc-success').slideUp();
+  $('#mc-error').slideDown();
+<% end %>

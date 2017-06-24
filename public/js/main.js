@@ -5,20 +5,20 @@ $(function() {
        Sub Form
      ========================================================================== */
 
-    $('#mc-form').ajaxChimp({
-        callback: callbackFunction,
-        url: 'http://csmthemes.us3.list-manage.com/subscribe/post?u=9666c25a337f497687875a388&id=5b881a50fb'
-            // http://xxx.xxx.list-manage.com/subscribe/post?u=xxx&id=xxx
-    });
+    // $('#mc-form').ajaxChimp({
+    //     callback: callbackFunction,
+    //     url: '/subscribe?id=1'
+    //         // http://xxx.xxx.list-manage.com/subscribe/post?u=xxx&id=xxx
+    // });
 
     function callbackFunction(resp) {
-        if (resp.result === 'success') {
-            $('#mc-error').slideUp();
-            $('#mc-success').slideDown();
-        } else if (resp.result === 'error') {
-            $('#mc-success').slideUp();
-            $('#mc-error').slideDown();
-        }
+      if (resp.result === 'success') {
+        $('#mc-error').slideUp();
+        $('#mc-success').slideDown();
+      } else if (resp.result === 'error') {
+        $('#mc-success').slideUp();
+        $('#mc-error').slideDown();
+      }
     }
 
   /* ==========================================================================
