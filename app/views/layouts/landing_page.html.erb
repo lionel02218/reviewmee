@@ -11,7 +11,8 @@
   </head>
 
   <body>
-    <header class="hero-section">
+    <% images = %w[coach.jpg fashion.jpg medical.jpg tradie.jpg] %>
+    <header class="hero-section" style="background: url(../img/<%= images[Random.rand(4)] %>) center center no-repeat;background-size:cover">
       <%= render "shared/navbar" %>
       <%= flash_messages %>
       <%= render "shared/welcome_section" %>
